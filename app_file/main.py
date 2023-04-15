@@ -1,3 +1,4 @@
+#Import required modules
 import tkinter as tk
 from tkinter import messagebox
 from geopy.geocoders import Nominatim
@@ -6,30 +7,43 @@ from datetime import datetime
 import requests
 import pytz
 
-
+#==============================Function===============================================#
+# Define function to get weather information based on user input 
+# Fetch data
 def GetWeather():
     #Location
+    # Get user input for city name and use geopy to get latitude and longitude
     try:
         city = text_field.get()
         geolocator = Nominatim(user_agent="geopiExercises")
         location = geolocator.geocode(city)
         lat = location.latitude
         lng = location.longitude
+        # Use timezonefinder to get the timezone at the user's location
         obj = TimezoneFinder()
+
+     # retrieve timezone based on latitude and longitude using timezonefinder library
         res = obj.timezone_at(lng=lng , lat=lat)
+        # update city label with city name
         city_lbl.config(text=res.split("/")[1])
         print(res)
 
         #time
+        # Get current time based on timezone and update clock label
         home = pytz.timezone(res)
         local_time = datetime.now(home)
         current_time = local_time.strftime("%I:%M:%p")
+        # update clock label with local time
         clock.config(text=current_time)
+        # update time label
         time_lbl.config(text="Local Time :")
 
+         # Use OpenWeatherMap API to get weather information for the given location
         api_key = "b7ef86b3524a1fb0cbe7093a298d9516"
         api = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lng}&appid={api_key}"
         json_data = requests.get(api).json()
+
+        # retrieve weather condition, temperature, pressure, humidity, and wind speed
         condition = json_data["weather"][0]["main"]
         description = json_data["weather"][0]["description"]
         temp = int(json_data["main"]["temp"] - 273.15)
@@ -37,21 +51,24 @@ def GetWeather():
         humidity = json_data["main"]["humidity"]
         wind = json_data["wind"]["speed"]
 
+        # update labels with weather information
         tmp_lbl.config(text=f"{temp} °")
         condition_lbl.config(text=f"{condition} | FEELS LIKE {temp} °")
         wind_lbl.config(text=wind)
         humidity_lbl.config(text=humidity)
         description_lbl.config(text=description)
         pressure_lbl.config(text=pressure)
+
     except Exception as error:
+        # display error message if location is not found or if there is an issue with retrieving weather information
         print(error)
         messagebox.showerror("Sky Watch","invalid entry")
 
-
-
+#==========================================Design==========================================================#
+# Create tkinter window
 window = tk.Tk()
 
-
+# Set window title, size, and prevent resizing
 window.title("SKY  WATCH")
 window.geometry("900x500+300+200")
 window.resizable(False,False)
@@ -85,7 +102,7 @@ frame_label = tk.Label(window,image=frame_img)
 frame_label.pack(pady=10 ,side=tk.BOTTOM)
 
 # City name
-city_lbl = tk.Label(window , font=("Helvetica" ,40 , "bold" ), fg="#2F2F4F" )
+city_lbl = tk.Label(window , font=("Helvetica" ,35 , "bold" ), fg="#2F2F4F" )
 city_lbl.place(x=25 , y=175)
 
 # time
@@ -127,6 +144,4 @@ pressure_lbl = tk.Label(window , text="   " , font=("arial" , 20 ,"bold" ) , bg=
 pressure_lbl.place(x=700 , y=438)
 
 
-
 window.mainloop()
-
