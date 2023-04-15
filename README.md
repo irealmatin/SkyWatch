@@ -6,12 +6,12 @@ Sky Watch is a Python program that retrieves weather information for a user-spec
 
 # Getting Started
 
-1 - Download or clone the repository to your local machine (Note that the logo and photos must be next to the main.py file.)
+- Download or clone the repository to your local machine (Note that the logo and photos must be next to the main.py file.)
 
-2 - Install the necessary dependencies by running pip install -r requirements.txt on your terminal.
+- Install the necessary dependencies by running pip install -r requirements.txt on your terminal.
 
-3 - Run tha `main.py` script by typing `python main.py` .
+- Run tha `main.py` script by typing `python main.py` .
 
-4 - Then a window will open and you have to click on the magnifying glass to see the result after entering the desired city name.
+- Then a window will open and you have to click on the magnifying glass to see the result after entering the desired city name.
 
-5 - enjoy it :))
+- enjoy it :))
