@@ -85,46 +85,46 @@ frame_label = tk.Label(window,image=frame_img)
 frame_label.pack(pady=10 ,side=tk.BOTTOM)
 
 # City name
-city_lbl = tk.Label(window , font=("arial" ,40 , "bold" ), fg="#4b4bcc" )
-city_lbl.place(x=25 , y=140)
+city_lbl = tk.Label(window , font=("Helvetica" ,40 , "bold" ), fg="#2F2F4F" )
+city_lbl.place(x=25 , y=175)
 
 # time
-time_lbl = tk.Label(window , font=("arial",20, "bold") , fg="#4b4bcc") 
-time_lbl.place(x=30 , y=230)
+time_lbl = tk.Label(window , font=("arial",15, "bold") , fg="#2F2F4F") 
+time_lbl.place(x=30 , y=240)
 
-clock = tk.Label(window, font=("Helvetica" , 35, "bold") , fg="orange")
-clock.place(x=95,y=270)
+clock = tk.Label(window, font=("Helvetica" , 40, "bold") , fg="orange")
+clock.place(x=30,y=270)
 
 # labels for Box Line
-lbl1 = tk.Label(window , text="WIND:" , font=("Helvetica",15,"bold"), fg="#404040" ,bg="#1ab5ef")
+lbl1 = tk.Label(window , text="WIND:" , font=("Helvetica",15,"bold"), fg="#F8F8F8" ,bg="#1ab5ef")
 lbl1.place(x=120,y=403)
 
-lbl2 = tk.Label(window , text="HUMIDITY:" , font=("Helvetica",15,"bold"), fg="#404040" ,bg="#1ab5ef")
+lbl2 = tk.Label(window , text="HUMIDITY:" , font=("Helvetica",15,"bold"), fg="#F8F8F8" ,bg="#1ab5ef")
 lbl2.place(x=280,y=403)
 
-lbl3 = tk.Label(window , text="DESCRIPTION:" , font=("Helvetica",15,"bold"), fg="#404040" ,bg="#1ab5ef")
+lbl3 = tk.Label(window , text="DESCRIPTION:" , font=("Helvetica",15,"bold"), fg="#F8F8F8" ,bg="#1ab5ef")
 lbl3.place(x=450,y=403)
 
-lbl4 = tk.Label(window , text="PRESSURE:" , font=("Helvetica",15,"bold"), fg="#404040" ,bg="#1ab5ef")
+lbl4 = tk.Label(window , text="PRESSURE:" , font=("Helvetica",15,"bold"), fg="#F8F8F8" ,bg="#1ab5ef")
 lbl4.place(x=670,y=403)
 
 tmp_lbl = tk.Label(window , font=("arial",70,"bold"),fg="orange")
 tmp_lbl.place(x=600 , y=170)
 
-condition_lbl = tk.Label(window , font=("arial" , 15 , "bold"), fg="#4b4bcc")
+condition_lbl = tk.Label(window , font=("arial" , 15 , "bold"), fg="#2F2F4F")
 condition_lbl.place(x=590 , y=270)
 
-wind_lbl = tk.Label(window , text="---" , font=("arial" , 20 ) , bg="#1ab5ef" , fg="#404040")
-wind_lbl.place(x=120 , y=430)
+wind_lbl = tk.Label(window , text="   " , font=("arial" , 20 , "bold") , bg="#1ab5ef" , fg="#2F2F4F")
+wind_lbl.place(x=120 , y=438)
 
-humidity_lbl = tk.Label(window , text="---" , font=("arial" , 20 ) , bg="#1ab5ef" , fg="#404040")
-humidity_lbl.place(x=305 , y=430)
+humidity_lbl = tk.Label(window , text="   " , font=("arial" , 20 , "bold") , bg="#1ab5ef" , fg="#2F2F4F")
+humidity_lbl.place(x=305 , y=438)
 
-description_lbl = tk.Label(window , text="---" , font=("arial" , 20 ) , bg="#1ab5ef" , fg="#404040")
-description_lbl.place(x=450 , y=430)
+description_lbl = tk.Label(window , text="   " , font=("arial" , 20,"bold" ) , bg="#1ab5ef" , fg="#2F2F4F")
+description_lbl.place(x=465 , y=438)
 
-pressure_lbl = tk.Label(window , text="---" , font=("arial" , 20 ) , bg="#1ab5ef" , fg="#404040")
-pressure_lbl.place(x=700 , y=430)
+pressure_lbl = tk.Label(window , text="   " , font=("arial" , 20 ,"bold" ) , bg="#1ab5ef" , fg="#2F2F4F")
+pressure_lbl.place(x=700 , y=438)
 
 
 
