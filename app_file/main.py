@@ -125,21 +125,27 @@ lbl3.place(x=450,y=403)
 lbl4 = tk.Label(window , text="PRESSURE:" , font=("Helvetica",15,"bold"), fg="#F8F8F8" ,bg="#1ab5ef")
 lbl4.place(x=670,y=403)
 
+# tempreture Lable
 tmp_lbl = tk.Label(window , font=("arial",70,"bold"),fg="orange")
 tmp_lbl.place(x=600 , y=170)
 
+# condition lable
 condition_lbl = tk.Label(window , font=("arial" , 15 , "bold"), fg="#2F2F4F")
 condition_lbl.place(x=590 , y=270)
 
+# wind lable
 wind_lbl = tk.Label(window , text="   " , font=("arial" , 20 , "bold") , bg="#1ab5ef" , fg="#2F2F4F")
 wind_lbl.place(x=120 , y=438)
 
+# humidity lable
 humidity_lbl = tk.Label(window , text="   " , font=("arial" , 20 , "bold") , bg="#1ab5ef" , fg="#2F2F4F")
 humidity_lbl.place(x=305 , y=438)
 
+# description lable
 description_lbl = tk.Label(window , text="   " , font=("arial" , 20,"bold" ) , bg="#1ab5ef" , fg="#2F2F4F")
 description_lbl.place(x=465 , y=438)
 
+#pressure lable
 pressure_lbl = tk.Label(window , text="   " , font=("arial" , 20 ,"bold" ) , bg="#1ab5ef" , fg="#2F2F4F")
 pressure_lbl.place(x=700 , y=438)
 
