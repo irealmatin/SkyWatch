@@ -25,7 +25,7 @@ def GetWeather():
      # retrieve timezone based on latitude and longitude using timezonefinder library
         res = obj.timezone_at(lng=lng , lat=lat)
         # update city label with city name
-        city_lbl.config(text=res.split("/")[1])
+        city_lbl.config(text=res.split("/")[0])
         print(res)
 
         #time
