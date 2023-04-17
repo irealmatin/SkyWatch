@@ -25,7 +25,8 @@ def GetWeather():
      # retrieve timezone based on latitude and longitude using timezonefinder library
         res = obj.timezone_at(lng=lng , lat=lat)
         # update city label with city name
-        city_lbl.config(text=res.split("/")[0])
+        continent_lbl.config(text=res.split("/")[0])
+        
         print(res)
 
         #time
@@ -102,8 +103,8 @@ frame_label = tk.Label(window,image=frame_img)
 frame_label.pack(pady=10 ,side=tk.BOTTOM)
 
 # City name
-city_lbl = tk.Label(window , font=("Helvetica" ,35 , "bold" ), fg="#2F2F4F" )
-city_lbl.place(x=25 , y=175)
+continent_lbl = tk.Label(window , font=("Helvetica" ,35 , "bold" ), fg="#2F2F4F" )
+continent_lbl.place(x=25 , y=175)
 
 # time
 time_lbl = tk.Label(window , font=("arial",15, "bold") , fg="#2F2F4F") 
