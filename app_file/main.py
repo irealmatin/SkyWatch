@@ -102,9 +102,12 @@ frame_img = tk.PhotoImage(file="box.png")
 frame_label = tk.Label(window,image=frame_img)
 frame_label.pack(pady=10 ,side=tk.BOTTOM)
 
-# City name
+# continent name
 continent_lbl = tk.Label(window , font=("Helvetica" ,35 , "bold" ), fg="#2F2F4F" )
 continent_lbl.place(x=25 , y=175)
+
+# city name
+# city_lbl = tk.Lable(window , font=("Helvetica" , 35 , "bold") , fg="#2F2F4F")
 
 # time
 time_lbl = tk.Label(window , font=("arial",15, "bold") , fg="#2F2F4F") 
