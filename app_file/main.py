@@ -1,11 +1,12 @@
 #Import required modules
 import tkinter as tk
+from datetime import datetime
 from tkinter import messagebox
+
+import pytz
+import requests
 from geopy.geocoders import Nominatim
 from timezonefinder import TimezoneFinder
-from datetime import datetime
-import requests
-import pytz
 
 #==============================Function===============================================#
 # Define function to get weather information based on user input 
