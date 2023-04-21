@@ -108,6 +108,7 @@ continent_lbl.place(x=25 , y=175)
 
 # city name
 # city_lbl = tk.Lable(window , font=("Helvetica" , 35 , "bold") , fg="#2F2F4F")
+# city_lbl.place(x= , y=)
 
 # time
 time_lbl = tk.Label(window , font=("arial",15, "bold") , fg="#2F2F4F") 
