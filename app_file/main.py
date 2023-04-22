@@ -1,4 +1,3 @@
-#Import required modules
 import tkinter as tk
 from datetime import datetime
 from tkinter import messagebox
@@ -158,5 +157,5 @@ description_lbl.place(x=465 , y=438)
 pressure_lbl = tk.Label(window , text="   " , font=("arial" , 20 ,"bold" ) , bg="#1ab5ef" , fg="#2F2F4F")
 pressure_lbl.place(x=700 , y=438)
 
-
 window.mainloop()
+
