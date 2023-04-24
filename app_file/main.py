@@ -120,7 +120,7 @@ time_lbl.place(x=30 , y=240)
 clock = tk.Label(window, font=("Helvetica" , 40, "bold") , fg="orange")
 clock.place(x=30,y=270)
 
-# labels for Box Line
+# labels for Box Line #
 lbl1 = tk.Label(window , text="WIND:" , font=("Helvetica",15,"bold"), fg="#F8F8F8" ,bg="#1ab5ef")
 lbl1.place(x=120,y=403)
 
